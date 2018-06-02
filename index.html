@@ -4,14 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>hack-or-snooze-a-lot</title>
-    
+    <title>hack-or-snooze-a-thon</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- adding a wrapper for nav bar in case I want to do anything to it -->
+    <div class="navWrapper">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"><b>hack-or-snooze-a-thon</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav navbar-dark">
+            <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
+            <a class="nav-item nav-link active" href="#">Submit |</a>
+            <a class="nav-item nav-link active" href="#">| Favorites</a>
+            </div>
+        </div>
+        </nav>
+    </div>
+    <!-- adding bootstrap form -->
+    <form>
+        <div class="form-group row">
+            <!-- .col-sm-num for bootstrap column sizing will apply to the
+            SMALLEST breakpoint and ALL those above it so in this case
+           samll to the largest devices -->
+            <label for="title-input" class="col-sm-2 col-form-label"><b>Title</b></label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="title-input" placeholder="Title of your story">
+            </div>
+              <!-- if I need to put anything under form bar 
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group row">
+            <label for="url-input"><b>URL</b></label>
+            <input type="url" class="form-control" id="url-input" placeholder="URL only!">
+        </div>
+        <button type="submit" class="btn btn-success">Submit Story</button>
+    </form>
 </body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<!-- adding all of boostrap JS because I want to use the collapse feature of BS for the form -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script src="app.js"></script>
 </html>

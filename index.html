@@ -28,23 +28,32 @@
     </div>
     <!-- adding bootstrap form -->
     <form>
-        <div class="form-group row">
+        <div class="form-group row submit-form">
             <!-- .col-sm-num for bootstrap column sizing will apply to the
             SMALLEST breakpoint and ALL those above it so in this case
            samll to the largest devices -->
-            <label for="title-input" class="col-sm-2 col-form-label"><b>Title</b></label>
-            <div class="col-sm-10">
-              <input type="text" class="form-control" id="title-input" placeholder="Title of your story">
+            <label for="story" class="col-sm-2 col-form-label"><b>Story</b></label>
+            <div class="col-sm-10 story-input">
+              <input type="text" class="form-control" id="story" placeholder="Title of your story">
             </div>
               <!-- if I need to put anything under form bar 
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
         </div>
         <div class="form-group row">
-            <label for="url-input"><b>URL</b></label>
-            <input type="url" class="form-control" id="url-input" placeholder="URL only!">
+            <label for="data" class="col-sm-2 col-form-label"><b>URL</b></label>
+            <div class="col-sm-10 data-input" >
+              <input type="url" class="form-control" id="data" placeholder="URL only!">
+            </div>
         </div>
         <button type="submit" class="btn btn-success">Submit Story</button>
     </form>
+    <!-- need to create div and ordered list so we can append stories to -->
+    <div class="col-sm-8">
+        <ol class="stories-list">
+          <li class="story">First Story!</li>
+          <li class="story">Second Story!</li>
+        </ol>
+    </div>
 </body>
 <!-- adding all of boostrap JS because I want to use the collapse feature of BS for the form -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

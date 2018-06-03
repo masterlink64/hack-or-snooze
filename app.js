@@ -9,8 +9,12 @@ $(document).ready(() => {
         // instead of assigning event listener to EVERY star
           // do it to only the parent and add a second selector parameter to listen 
         $('.stories-list').on("click", "i", function(event) {
+            let favList = $('fav-list');
             //let star = event.target
-            $(this).toggleClass("far fas");      
+            $(this).toggleClass("far fas");  
+            // need to append to favorite list when it is clicked
+              // how to get the information we want?
+            favList.append(`<li class="story"><i class="far fa-star"></i> <a href="${dataVal}">${storyVal}</a></li>`)
         });
     }; // can I write IIFE here?
     // function that will prevent default when you click the submit btn in the form
@@ -22,17 +26,13 @@ $(document).ready(() => {
             event.preventDefault();
             let storyVal = $('#story').val();
             let dataVal = $('#data').val();
-            // console.log($("#story").val());
-            // console.log($("#data").val());
-            //adding story and link to list
+            // adding story and link to list
             // will need to use href to link text
             $('.stories-list').append(`<li class="story"><i class="far fa-star"></i> <a href="${dataVal}">${storyVal}</a></li>`);
-            // adding event listener to new stories only
             // fix favorite star later, right now it is only adding event listener to new and toggling off the listener
               // for previous stories
             //favoriteStar();
             // clarify why this works
-            // everything still works without prevent default?
             // reset form to blank
             $('#submit-form').each(function(){
                 this.reset();

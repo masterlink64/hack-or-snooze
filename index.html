@@ -18,7 +18,7 @@
 </head>
 <body>
     <!-- adding a wrapper for nav bar in case I want to do anything to it -->
-    <div class="navWrapper">
+    <div class="navWrapper container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="#"><b>hack-or-snooze-a-thon</b></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
@@ -34,14 +34,14 @@
         </nav>
     </div>
     <!-- adding bootstrap form -->
-    <form class="collapse" id="submit-form">
+    <form class="collapse container" id="submit-form">
         <div class="form-group row">
             <!-- .col-sm-num for bootstrap column sizing will apply to the
             SMALLEST breakpoint and ALL those above it so in this case
            samll to the largest devices -->
             <label for="story" class="col-sm-2 col-form-label"><b>Story</b></label>
             <div class="col-sm-10 story-input">
-              <input type="text" class="form-control" id="story" placeholder="Title of your story">
+              <input type="text" class="form-control col-sm-6" id="story" placeholder="Title of your story">
             </div>
               <!-- if I need to put anything under form bar 
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
@@ -51,7 +51,7 @@
             <div class="col-sm-10 data-input">
                 <!-- type url should prevent you from entering a nonURL -->
                 <!-- something in the JS broke this though? -->
-              <input type="url" class="form-control" id="data" placeholder="URL only!">
+              <input type="url" class="form-control col-sm-6" id="data" placeholder="URL only!">
             </div>
         </div>
         <button type="submit" class="btn submit-story btn-success">Submit Story</button>
@@ -59,11 +59,17 @@
     <!-- need to create div and ordered list so we can append stories to -->
     <div class="col-sm-8 all-stories">
         <ol class="stories-list">
-          <li class="story"><i class="far fa-star"></i> <a id="l1"href="https://www.reddit.com/r/warriors/">The Warriors Are Awesome</a><small><script>$('#l1').hostname</script></small></li>
+          <li class="story"><i class="far fa-star"></i> <a id="l1"href="https://www.reddit.com/r/warriors/">The Warriors Are Awesome</a><small> (www.reddit.com) <script>$('#l1').hostname</script></small></li>
           <li class="story"><i class="far fa-star"></i> <a href="https://www.google.com/">How I do Homework</a></li>
           <li class="story"><i class="far fa-star"></i> <a href="https://arstechnica.com/">Tech News</a></li> 
           <li class="story"><i class="far fa-star"></i> <a href="https://www.reddit.com/">If You Want to Waste Time</a></li>
           <li class="story"><i class="far fa-star"></i> <a href="https://www.coachella.com/home/">Skipped This to Learn to Code</a></li>                                               
+        </ol>
+    </div>
+    <!-- create div for favorite stories -->
+    <div class="col-sm-8 fav-stories">
+        <ol class="fav-list">
+
         </ol>
     </div>
 </body>

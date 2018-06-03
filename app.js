@@ -5,8 +5,12 @@ $(document).ready(() => {
     // come back to this event listener for the bonus
     // Is this recommended? creating a function for this purpose to make smaller digestable code?
     function favoriteStar() {
-        $(".fa-star").on("click", function() {
-            $(this).toggleClass("far fas");
+        // trying event delegation
+        // instead of assigning event listener to EVERY star
+          // do it to only the parent and add a second selector parameter to listen 
+        $('.stories-list').on("click", "i", function(event) {
+            //let star = event.target
+            $(this).toggleClass("far fas");      
         });
     }; // can I write IIFE here?
     // function that will prevent default when you click the submit btn in the form
@@ -15,6 +19,7 @@ $(document).ready(() => {
     function addStory(event) {
         // click is a jQuery for another way of saying on click or evenlistener for click
         $(".btn.submit-story").click(function(event) {
+            event.preventDefault();
             let storyVal = $('#story').val();
             let dataVal = $('#data').val();
             // console.log($("#story").val());
@@ -22,11 +27,12 @@ $(document).ready(() => {
             //adding story and link to list
             // will need to use href to link text
             $('.stories-list').append(`<li class="story"><i class="far fa-star"></i> <a href="${dataVal}">${storyVal}</a></li>`);
-            // adding event listener to new stories
-            favoriteStar();
+            // adding event listener to new stories only
+            // fix favorite star later, right now it is only adding event listener to new and toggling off the listener
+              // for previous stories
+            //favoriteStar();
             // clarify why this works
             // everything still works without prevent default?
-            event.preventDefault();
             // reset form to blank
             $('#submit-form').each(function(){
                 this.reset();

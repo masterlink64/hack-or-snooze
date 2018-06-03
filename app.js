@@ -27,12 +27,24 @@ $(document).ready(() => {
             // clarify why this works
             // everything still works without prevent default?
             event.preventDefault();
+            // reset form to blank
             $('#submit-form').each(function(){
                 this.reset();
             });
         })
-        // reset form to blank
     };
+    // write a function to hide current list and show favorite list
+    function showFavorite() {
+        let favorite = $('.favoriteNav');
+        let allStories = $('.all-stories');
+        // when you click the favorite text on the nav bar do certain steps
+          // hide current content
+          // display new ordered list
+        favorite.click(function(event) {
+            allStories.hide();
+        })
+    }
     addStory();
     favoriteStar();
+    showFavorite();
 });

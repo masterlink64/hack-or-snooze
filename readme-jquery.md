@@ -36,6 +36,9 @@ __BONUS__
 * Users can click on a "favorites" option in the nav bar to show only stories that they have favorited. Clicking on it again shows all stories.
 <!-- add event listener when clicking on  favorites to only show favorite class
 hide  -->
+<!-- hide divs of the ordered list and show favorite list -->
+<!-- need to toggle favorite nav and all nav -->
+<!-- need to store favorite stories somewhere -->
 * In addition to displaying the title of each story, display the hostname for the corresponding URL. When users click on the hostname, all stories with different hostnames are filtered out (compare to the same functionality on Hacker News).
 <!-- would prob need to use window.location.host and filter out all of that -->
 

@@ -10,6 +10,11 @@
     <!-- might have to use font awesome for star -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <!-- adding all of boostrap JS because I want to use the collapse feature of BS for the form -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </head>
 <body>
     <!-- adding a wrapper for nav bar in case I want to do anything to it -->
@@ -23,7 +28,7 @@
             <div class="navbar-nav navbar-dark">
             <!-- can use href to collapse form with bootstrap -->
             <a class="nav-item nav-link active" data-toggle="collapse" role="button" href="#submit-form">Submit |</a>
-            <a class="nav-item nav-link active" href="#">| Favorites</a>
+            <a class="nav-item nav-link active favoriteNav" href="#">| Favorites</a>
             </div>
         </div>
         </nav>
@@ -52,10 +57,9 @@
         <button type="submit" class="btn submit-story btn-success">Submit Story</button>
     </form>
     <!-- need to create div and ordered list so we can append stories to -->
-    <div class="col-sm-8">
-
+    <div class="col-sm-8 all-stories">
         <ol class="stories-list">
-          <li class="story"><i class="far fa-star"></i> <a href="https://www.reddit.com/r/warriors/">The Warriors Are Awesome</a></li>
+          <li class="story"><i class="far fa-star"></i> <a id="l1"href="https://www.reddit.com/r/warriors/">The Warriors Are Awesome</a><small><script>$('#l1').hostname</script></small></li>
           <li class="story"><i class="far fa-star"></i> <a href="https://www.google.com/">How I do Homework</a></li>
           <li class="story"><i class="far fa-star"></i> <a href="https://arstechnica.com/">Tech News</a></li> 
           <li class="story"><i class="far fa-star"></i> <a href="https://www.reddit.com/">If You Want to Waste Time</a></li>
@@ -64,8 +68,8 @@
     </div>
 </body>
 <!-- adding all of boostrap JS because I want to use the collapse feature of BS for the form -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-<script src="app.js"></script>
+<script src="app.js"></script> -->
 </html>

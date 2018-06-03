@@ -14,21 +14,21 @@
     <div class="navWrapper">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="#"><b>hack-or-snooze-a-thon</b></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav navbar-dark">
-            <!-- <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a> -->
-            <a class="nav-item nav-link active" href="#">Submit |</a>
+            <!-- can use href to collapse form -->
+            <a class="nav-item nav-link active" data-toggle="collapse" role="button" href="#submit-form">Submit |</a>
             <a class="nav-item nav-link active" href="#">| Favorites</a>
             </div>
         </div>
         </nav>
     </div>
     <!-- adding bootstrap form -->
-    <form>
-        <div class="form-group row submit-form">
+    <form class="collapse" id="submit-form">
+        <div class="form-group row">
             <!-- .col-sm-num for bootstrap column sizing will apply to the
             SMALLEST breakpoint and ALL those above it so in this case
            samll to the largest devices -->

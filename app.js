@@ -15,16 +15,18 @@ $(document).ready(() => {
     function addStory(event) {
         // click is a jQuery for another way of saying on click or evenlistener for click
         $(".btn.submit-story").click(function(event) {
-            event.preventDefault();
             let storyVal = $('#story').val();
             let dataVal = $('#data').val();
             // console.log($("#story").val());
             // console.log($("#data").val());
             //adding story and link to list
-            $('.stories-list').append(`<li class="story"><i class="far fa-star"></i>${storyVal}</li>`);
+            // will need to use href to link text
+            $('.stories-list').append(`<li class="story"><i class="far fa-star"></i> <a href="${dataVal}">${storyVal}</a></li>`);
             // adding event listener to new stories
             favoriteStar();
             // clarify why this works
+            // everything still works without prevent default?
+            event.preventDefault();
             $('#submit-form').each(function(){
                 this.reset();
             });

@@ -16,8 +16,12 @@ $(document).ready(() => {
         // click is a jQuery for another way of saying on click or evenlistener for click
         $(".btn.submit-story").click(function(event) {
             event.preventDefault();
-            console.log($("#story").val());
-            console.log($("#data").val());
+            let storyVal = $('#story').val();
+            let dataVal = $('#data').val();
+            // console.log($("#story").val());
+            // console.log($("#data").val());
+            //adding story and link to list
+            $('.stories-list').append(`<li class="story"><i class="far fa-star"></i>${storyVal}</li>`);
             // clarify why this works
             $('#submit-form').each(function(){
                 this.reset();

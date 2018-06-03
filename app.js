@@ -22,6 +22,8 @@ $(document).ready(() => {
             // console.log($("#data").val());
             //adding story and link to list
             $('.stories-list').append(`<li class="story"><i class="far fa-star"></i>${storyVal}</li>`);
+            // adding event listener to new stories
+            favoriteStar();
             // clarify why this works
             $('#submit-form').each(function(){
                 this.reset();

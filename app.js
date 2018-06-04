@@ -22,7 +22,8 @@ $(document).ready(() => {
     // will need to grab values from form
     function addStory(event) {
         // click is a jQuery for another way of saying on click or evenlistener for click
-        $(".btn.submit-story").click(function(event) {
+        // 
+        $("form").submit(function(event) {
             event.preventDefault();
             let storyVal = $('#story').val();
             let dataVal = $('#data').val();
